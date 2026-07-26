@@ -1,0 +1,50 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 200px;
+    cursor: pointer;
+    border: 3px solid white;
+    transition: transform 0.3s;
+}
+
+    .thumbnail:hover {
+        transform: scale(1.1);
+    }
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+    .lightbox img {
+        display: block;
+        margin: 60px auto;
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
